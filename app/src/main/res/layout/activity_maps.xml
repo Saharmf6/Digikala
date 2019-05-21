@@ -1,0 +1,64 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <LinearLayout
+        android:id="@+id/direction"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/pointsLayout"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:hint="آدرس دقیق را وارد کنید"
+            android:textColorHint="@color/light_pink"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="bottom"
+        android:id="@+id/pointsLayout"
+        android:weightSum="2"
+        android:layout_alignBottom="@id/map"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FCE4EC"
+            android:text="ارسال سفارش"
+            android:textColor="@color/myColor" />
+
+        <Button
+            android:id="@+id/btnDest"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FCE4EC"
+            android:text="انتخاب مقصد"
+            android:textColor="@color/myColor" />
+
+
+    </LinearLayout>
+</RelativeLayout>
